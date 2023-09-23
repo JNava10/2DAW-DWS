@@ -5,6 +5,17 @@ namespace Model;
 class Nest
 {
     public $snakes;
+
+    public function getSnakes()
+    {
+        return $this->snakes;
+    }
+
+    public function getSnakeNum(): int
+    {
+        return $this->snakeNum;
+    }
+
     public $snakeNum;
 
     /**

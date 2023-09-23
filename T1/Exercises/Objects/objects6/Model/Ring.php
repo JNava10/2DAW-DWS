@@ -7,14 +7,15 @@ class Ring
     private $ringColors = ['r', 'v', 'a'];
     public $color;
 
+    public function __construct()
+    {
+        $this->color = $this->ringColors[array_rand($this->ringColors)];
+    }
+
     public function __call($name, $arguments)
     {
-        // TODO: Two constructors, empty (random color) and one with color parameter.
-        if ($name == '__constructor' || count($arguments) < 1) {
+        if ($name == '__constructor' && count($arguments) < 1) {
             $this->color = array_rand($this->ringColors);
-        }
-        else if ($name == '_constructor') {
-            $this->color = $arguments[0];
         }
     }
 
@@ -22,4 +23,6 @@ class Ring
     {
         return $this->color;
     }
+
+
 }
