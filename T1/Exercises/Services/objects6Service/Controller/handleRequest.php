@@ -15,7 +15,6 @@ if ($statusCode == 400)
 }
 else header("HTTP/1.1 $statusCode $statusMsg");
 
-$carData = $getCars($requestArgs[1]);
 function getResponseStatus(array $requestArgs, string $requestMethod): array
 {
     $validArgsNumber = 1;
