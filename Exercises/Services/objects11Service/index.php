@@ -1,6 +1,5 @@
 <?php
 
-use Controller\Builder;
 use Controller\CivilizationHandler;
 use Controller\Simulation;
 use Model\Civilization;
